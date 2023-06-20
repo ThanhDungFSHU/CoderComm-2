@@ -186,6 +186,7 @@ function PostCard({ post }) {
         </Box>
       </Modal>
 
+      {/* how  */}
       <Stack spacing={2} sx={{ p: 3 }}>
         <Typography>{post.content}</Typography>
 
