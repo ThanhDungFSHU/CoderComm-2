@@ -79,7 +79,9 @@ function ProfileCover({ profile }) {
             textAlign: { xs: "center", md: "left" },
           }}
         >
-          <Typography variant="h5">{name}</Typography>
+          <Typography variant="h5" color="gray">
+            {name}
+          </Typography>
           <Typography sx={{ opacity: 0.72 }}>{jobTitle}</Typography>
           {friendStatus}
         </Box>
