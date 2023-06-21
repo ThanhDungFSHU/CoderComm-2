@@ -29,6 +29,7 @@ function EditPost({ post, CloseModal, handleClose }) {
     resolver: yupResolver(loginSchema),
   });
   const { user } = useAuth();
+  // const author = post?.author;
 
   const {
     handleSubmit,
@@ -67,7 +68,7 @@ function EditPost({ post, CloseModal, handleClose }) {
             fullWidth
             sx={{
               "& fieldset": {
-                borderWidth: `1px !important`,
+                borderWidth: "1px !important",
                 borderColor: alpha("#919EAB", 0.32),
               },
             }}

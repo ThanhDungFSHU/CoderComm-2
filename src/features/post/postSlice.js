@@ -101,12 +101,14 @@ export const deletePost = (id) => async (dispatch) => {
 };
 
 export const editPost =
-  ({ id, content, image, user }) =>
+  ({ id, avatar, title, content, image, user }) =>
   async (dispatch) => {
     dispatch(slice.actions.startLoading);
     try {
       const imageUrl = await CloudinaryUpload(image);
       const res = await apiService.put(`/posts/${id}`, {
+        avatar,
+        title,
         content,
         image: imageUrl,
         user,
